@@ -24,7 +24,7 @@ io.on('connection', socket => {
         socket.join(user);
 
         // Welcome current user 
-        socket.emit('message', formatMessage(botName,'Welcome to chatroom')); 
+        socket.emit('message', formatMessage(botName,'You joined. Welcome to Chatroom.')); 
 
         // Broadcast when a user connects 
         socket.broadcast.emit('message', formatMessage(botName, `${user.username} has joined the chat`)); 
